@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/Container";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { BlessedHeroKicker } from "@/components/kicker";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -30,9 +31,9 @@ export default function Hero() {
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="inline-flex items-center bg-slate-200 rounded-full px-4 py-1.5 text-sm font-semibold text-slate-800 transition-colors hover:bg-slate-200"
+              // className="inline-flex items-center bg-slate-200 rounded-full px-4 py-1.5 text-sm font-semibold text-slate-800 transition-colors hover:bg-slate-200"
             >
-              <span>Get started 100% for free</span>
+              <BlessedHeroKicker />
             </motion.div>
 
             <motion.h1
