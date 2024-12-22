@@ -39,7 +39,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl max-w-3xl mx-auto xl:leading-[1.22]"
+              className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-8xl max-w-4xl mx-auto xl:leading-[1.22]"
             >
               Living your dreamlife is your birthright
             </motion.h1>
