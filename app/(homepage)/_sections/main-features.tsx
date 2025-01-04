@@ -41,7 +41,7 @@ const feat = [
 
 const HomeMainFeatures = () => {
   return (
-    <section className="bg-[#f2f2f2]">
+    <section className="">
       <Container section>
         <h1 className="text-center mb-4">Platform core features</h1>
         <p className="max-w-3xl mx-auto text-xl text-center text-slate-600">
@@ -51,7 +51,7 @@ const HomeMainFeatures = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:space-x-6 mt-16">
           {feat.map((feature, index) => (
-            <div key={index} className="p-10 rounded-lg bg-[#e8e8e8]">
+            <div key={index} className="p-10 rounded-lg bg-[#f2f2f2]">
               <div className="inline-block rounded-sm bg-black p-2">
                 <feature.icon size={32} className="text-white" />
               </div>
@@ -66,3 +66,6 @@ const HomeMainFeatures = () => {
 };
 
 export default HomeMainFeatures;
+
+// bg-[#f2f2f2]
+// bg-[#e8e8e8]

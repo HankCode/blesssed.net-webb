@@ -21,8 +21,10 @@ export default function Hero() {
 
   return (
     <>
-      <section className="">
-        <Container section className="relative">
+      <section className="relative overflow-hidden h-screen w-full">
+        {/* <div className="absolute inset-0 z-[-1] bg-gradient-to-r from-primary to-accent" /> */}
+        <img src="/img/bg.jpg" alt="" className="absolute inset-0 object-cover w-full" />
+        <Container section className="relative flex justify-center items-center h-full -mt-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -33,26 +35,29 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               // className="inline-flex items-center bg-slate-200 rounded-full px-4 py-1.5 text-sm font-semibold text-slate-800 transition-colors hover:bg-slate-200"
             >
-              <BlessedHeroKicker />
+              {/* <BlessedHeroKicker /> */}
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-8xl max-w-4xl mx-auto xl:leading-[1.22]"
+              className="mt-4 text-4xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-[84px] max-w-4xl mx-auto xl:leading-[1.22]"
             >
-              Living your dreamlife is your birthright
+              It is your <span className="">birthright</span> to live your{" "}
+              <span className="">dreamlife</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="mx-auto mt-6 max-w-2xl text-lg text-slate-600"
+              className="mx-auto mt-7 leading-normal max-w-xl text-xl text-slate-600"
             >
-              Understand and implement the principles of manifestation to transform your life. Based
-              on the teachings of Kabbalah, Neville Goddard, A Course in Miracles, and the Bible.
+              A platform to help you understand and implement spiritual laws into into your daily
+              routine to transform your life.
+              {/* Based on
+              the teachings of Kabbalah, Neville Goddard, A Course in Miracles, and the Bible. */}
             </motion.p>
 
             <motion.div
@@ -61,17 +66,8 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-10 flex justify-center gap-4"
             >
-              <Button
-                size="lg"
-                className="h-12 px-6 text-base font-semibold transition-all hover:scale-105 rounded-full"
-              >
-                Get Started
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-12 px-6 text-base font-semibold transition-all hover:scale-105 rounded-full"
-              >
+              <Button size="lg">Get Started</Button>
+              <Button variant="outline" size="lg">
                 Learn More
               </Button>
             </motion.div>
