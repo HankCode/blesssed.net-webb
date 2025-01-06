@@ -23,7 +23,16 @@ export default function Hero() {
     <>
       <section className="relative overflow-hidden h-screen w-full">
         {/* <div className="absolute inset-0 z-[-1] bg-gradient-to-r from-primary to-accent" /> */}
-        <img src="/img/bg.jpg" alt="" className="absolute inset-0 object-cover w-full" />
+        <img
+          src="/img/bg.jpg"
+          alt=""
+          className="absolute inset-0 object-cover w-full hidden sm:block"
+        />
+        <img
+          src="/img/bg_mobile.jpg"
+          alt=""
+          className="absolute inset-0 object-cover w-full sm:hidden"
+        />
         <Container section className="relative flex justify-center items-center h-full -mt-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -54,8 +63,8 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="mx-auto mt-7 leading-normal max-w-xl text-xl text-slate-600"
             >
-              A platform to help you understand and implement spiritual laws into into your daily
-              routine to transform your life.
+              Transform your life by learning and applying spiritual laws, simplified and supported
+              by practical tools to easily bring them into your daily life.
               {/* Based on
               the teachings of Kabbalah, Neville Goddard, A Course in Miracles, and the Bible. */}
             </motion.p>
@@ -64,12 +73,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="mt-10 flex justify-center gap-4"
+              className="mt-8 flex justify-center gap-4"
             >
               <Button size="lg">Get Started</Button>
-              <Button variant="outline" size="lg">
+              {/* <Button variant="outline" size="lg">
                 Learn More
-              </Button>
+              </Button> */}
             </motion.div>
           </motion.div>
 
