@@ -42,12 +42,12 @@ const feat = [
 const HomeMainFeatures = () => {
   return (
     <section className="">
-      <Container section>
-        <h1 className="text-center mb-4">Platform core features</h1>
+      <Container>
+        {/* <h1 className="text-center mb-4">Platform core features</h1>
         <p className="max-w-3xl mx-auto text-xl text-center text-slate-600">
           Dive into the foundational principles and key practices that shape our platform, designed
           to guide you on your journey to manifesting your dream life.
-        </p>
+        </p> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:space-x-6 mt-16">
           {feat.map((feature, index) => (

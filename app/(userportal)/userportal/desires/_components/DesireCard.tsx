@@ -130,7 +130,7 @@ export default function DesireCard({ desire }: { desire: DesireProps }) {
             variant="ghost"
             size="icon"
             className="h-8 w-8"
-            onClick={() => router.push(`/desires/${desire.id}/edit`)}
+            onClick={() => router.push(`/userportal/desires/${desire.id}/edit`)}
           >
             <Edit2 className="h-4 w-4" />
             <span className="sr-only">Edit</span>

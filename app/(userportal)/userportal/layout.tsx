@@ -1,18 +1,29 @@
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "./_components/app-sidebar";
-import { cookies } from "next/headers";
+import type React from "react";
+import { Sidebar } from "./_components/sidebar";
+import { Header } from "./_components/header";
+import { MobileNav } from "./_components/mobile-nav";
 
-export default async function Layout({ children }: { children: React.ReactNode }) {
-  const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar:state")?.value === "true";
+export const metadata = {
+  title: "Manifest",
+  description: "Personal desire manifestation app",
+  manifest: "/manifest.webmanifest",
+};
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider defaultOpen={defaultOpen}>
-      <AppSidebar />
-      <div className="flex flex-1 flex-col gap-4 p-4 max-w-2xl">
-        <SidebarTrigger />
-        {children}
-      </div>
-    </SidebarProvider>
+    <html lang="en">
+      <body>
+        <div className="flex min-h-screen">
+          <div className="hidden md:flex md:w-64 md:flex-col">
+            <Sidebar />
+          </div>
+          <div className="flex flex-1 flex-col">
+            <Header />
+            <main className="flex-1 pb-16 md:pb-0">{children}</main>
+            <MobileNav />
+          </div>
+        </div>
+      </body>
+    </html>
   );
 }
